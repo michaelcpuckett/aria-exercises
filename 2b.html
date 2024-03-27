@@ -1,0 +1,23 @@
+<!-- Original markup: -->
+
+<div role="list">
+  <li>Test</li>
+</div>
+
+<!-- Corrected markup: -->
+
+<ul>
+  <li>Test</li>
+</ul>
+
+<!-- Alternate corrected markup: -->
+
+<div role="list">
+  <div role="listitem">Test</div>
+</div>
+
+<!-- Explanation:
+  * <div role="list"> is valid, but the <li> element is not a valid child of a
+    <div> element.
+  * Use <ul> or <ol> for lists.
+-->

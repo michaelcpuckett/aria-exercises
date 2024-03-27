@@ -1,0 +1,35 @@
+<!-- Original markup: -->
+
+<section aria-label="Modal dialog">
+  <h2>Warning!</h2>
+  <p>Your changes will not be saved.</p>
+  <button type="button">Cancel</button>
+  <button type="button">OK</button>
+</section>
+
+<!-- Corrected markup: -->
+
+<dialog
+  role="alertdialog"
+  aria-labelledby="dialog-title"
+  aria-describedby="dialog-content"
+>
+  <h2 id="dialog-title">Warning!</h2>
+  <p id="dialog-content">Your changes will not be saved.</p>
+  <button type="button">Cancel</button>
+  <button type="button">OK</button>
+</dialog>
+
+<!-- Explanation:
+  * The <section> element is not the correct element to use for a modal dialog.
+  * Use the <dialog> element instead.
+  * The <dialog> element should have a role of "alertdialog" to indicate that it
+    is a modal dialog that requires user attention.
+  * The <dialog> element should have an aria-labelledby attribute that points to
+    the title of the dialog.
+  * The <dialog> element should have an aria-describedby attribute that points
+    to the content of the dialog.
+  * The <dialog> element gets many accessibility features for free, such as
+    trapping focus within the dialog, and preventing interaction with elements
+    outside the dialog.
+-->

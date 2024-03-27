@@ -1,0 +1,22 @@
+<!-- Original markup: -->
+
+<div aria-label="Cats">
+  <p>I love cats!</p>
+</div>
+
+<!-- Corrected markup: -->
+
+<div role="region" aria-label="Cats">
+  <p>I love cats!</p>
+</div>
+
+<!-- Alternate corrected markup: -->
+
+<section aria-label="Cats">
+  <p>I love cats!</p>
+</section>
+
+<!-- Explanation:
+  * <div> cannot get an aria-label without a role.
+  * <section> is a good alternative to <div> in this case.
+-->

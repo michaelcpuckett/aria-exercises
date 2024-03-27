@@ -1,0 +1,30 @@
+<!-- Original markup: -->
+
+<form>
+  <label>First Name</label>
+  <input type="text" name="firstName" />
+</form>
+
+<!-- Corrected markup: -->
+
+<form>
+  <label>
+    First Name
+    <input type="text" name="firstName" />
+  </label>
+</form>
+
+<!-- Alternate corrected markup: -->
+
+<form>
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName" />
+</form>
+
+<!-- Explanation:
+  * The label is not associated with the input field.
+  * Wrap the input field inside the label element, or use the "for" attribute to
+    associate the label with the input field.
+  * Wrapping has the extra benefit of making the input field clickable when
+    clicking the label.
+-->
