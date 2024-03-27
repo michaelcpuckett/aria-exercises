@@ -1,16 +1,34 @@
 <!-- Original markup: -->
 
-<span>
-  <div>Test</div>
-</span>
+<form>
+  <label>First Name</label>
+  <input type="text" name="firstName" />
+</form>
 
 <!-- Corrected markup: -->
 
-<div>
-  <span>Test</span>
-</div>
+<form>
+  <label>
+    First Name
+    <input type="text" name="firstName" />
+  </label>
+</form>
+
+<!-- Alternate corrected markup: -->
+
+<form>
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName" />
+</form>
 
 <!-- Explanation:
-  * <span> cannot contain block-level elements like <div>.
-  * <div> can contain <span>.
+  * The label is not associated with the input field.
+  * Wrap the input field inside the label element, or use the "for" attribute to
+    associate the label with the input field.
+  * Wrapping has the extra benefit of making the input field clickable when
+    clicking the label.
+-->
+
+<!-- More information:
+  * https://dequeuniversity.com/rules/axe/3.3/label
 -->

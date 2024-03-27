@@ -1,30 +1,27 @@
 <!-- Original markup: -->
 
-<form>
-  <label>First Name</label>
-  <input type="text" name="firstName" />
-</form>
+<div aria-label="Cats">
+  <p>I love cats!</p>
+</div>
 
 <!-- Corrected markup: -->
 
-<form>
-  <label>
-    First Name
-    <input type="text" name="firstName" />
-  </label>
-</form>
+<section aria-label="Cats">
+  <p>I love cats!</p>
+</section>
 
 <!-- Alternate corrected markup: -->
 
-<form>
-  <label for="firstName">First Name</label>
-  <input type="text" id="firstName" name="firstName" />
-</form>
+<div role="region" aria-label="Cats">
+  <p>I love cats!</p>
+</div>
 
 <!-- Explanation:
-  * The label is not associated with the input field.
-  * Wrap the input field inside the label element, or use the "for" attribute to
-    associate the label with the input field.
-  * Wrapping has the extra benefit of making the input field clickable when
-    clicking the label.
+  * <div> cannot get an aria-label without a role.
+  * <section> is a good alternative to <div> in this case. If a <section>
+    element is not appropriate, use role=region.
+-->
+
+<!-- More info:
+  * https://dequeuniversity.com/rules/axe/3.3/aria-allowed-attr?application=axeAPI
 -->

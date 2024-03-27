@@ -1,0 +1,50 @@
+<!-- Original markup: -->
+
+<div role="group" class="card">
+  <!--
+    This image is a gradient with a decorative star imprint.
+    It is moved to the background with CSS.
+  -->
+  <img src="images/card-background.png" />
+  <h3>Sign Up for CodeYou!</h3>
+  <p>Get a job making websites!</p>
+  <!-- This image is a visual of a student working on a project. -->
+  <img src="images/student.png" />
+</div>
+
+<!-- Corrected markup: -->
+
+<div role="group" class="card">
+  <img src="images/card-background.png" role="presentation" />
+  <h3>Sign Up for CodeYou!</h3>
+  <p>Get a job making websites!</p>
+  <img
+    src="images/student.png"
+    alt="A student using a computer to build a website"
+  />
+</div>
+
+<!-- Alternate corrected markup: -->
+
+<div role="group" class="card">
+  <img src="images/card-background.png" alt="" />
+  <h3>Sign Up for CodeYou!</h3>
+  <p>Get a job making websites!</p>
+  <img
+    src="images/student.png"
+    alt="A student using a computer to build a website"
+  />
+</div>
+
+<!-- Explanation:
+  * The first image is a decorative image, so it does not need to be exposed
+    to screen readers. It should have a role="presentation" attribute or an
+    empty alt attribute.
+  * The second image is a meaningful image, so it should have an alt attribute.
+  * The alt attribute should describe the image in a way that makes sense in
+    context.
+-->
+
+<!-- More info:
+  * https://www.w3.org/WAI/tutorials/images/decorative/
+-->

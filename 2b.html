@@ -1,23 +1,37 @@
 <!-- Original markup: -->
 
-<div role="list">
-  <li>Test</li>
-</div>
+<main>
+  <p style="font-size: 36px">Welcome to my home page!</p>
+  <p>I hope you enjoy your visit!</p>
+</main>
 
 <!-- Corrected markup: -->
 
-<ul>
-  <li>Test</li>
-</ul>
+<main>
+  <h1>Welcome to my home page!</h1>
+  <p>I hope you enjoy your visit!</p>
+</main>
 
 <!-- Alternate corrected markup: -->
 
-<div role="list">
-  <div role="listitem">Test</div>
-</div>
+<main>
+  <p role="heading" aria-level="1" style="font-size: 36px">
+    Welcome to my home page!
+  </p>
+  <p>I hope you enjoy your visit!</p>
+</main>
 
 <!-- Explanation:
-  * <div role="list"> is valid, but the <li> element is not a valid child of a
-    <div> element.
-  * Use <ul> or <ol> for lists.
+  * The first <p> element is styled to look like a heading, but it is not
+    marked up as a heading.
+  * Screen reader users navigate web pages by headings, so it is important to
+    include headings and mark them up properly.
+  * Use a heading element (<h1>-<h6>) whenever possible. The heading level
+    should reflect the importance of the heading within the document structure.
+  * role=heading is an alternative to using a heading element, in case the
+    heading is styled in a way that makes it difficult to use a heading element.
+-->
+
+<!-- More info:
+  * https://dequeuniversity.com/rules/axe/3.3/p-as-heading
 -->

@@ -1,22 +1,28 @@
 <!-- Original markup: -->
 
-<div aria-label="Cats">
-  <p>I love cats!</p>
+<div role="list">
+  <li>Test</li>
 </div>
 
 <!-- Corrected markup: -->
 
-<div role="region" aria-label="Cats">
-  <p>I love cats!</p>
-</div>
+<ul>
+  <li>Test</li>
+</ul>
 
 <!-- Alternate corrected markup: -->
 
-<section aria-label="Cats">
-  <p>I love cats!</p>
-</section>
+<div role="list">
+  <div role="listitem">Test</div>
+</div>
 
 <!-- Explanation:
-  * <div> cannot get an aria-label without a role.
-  * <section> is a good alternative to <div> in this case.
+  * <div role="list"> is valid, but the <li> element is not a valid child of a
+    <div> element.
+  * This could cause screen readers to incorrectly interpret the content.
+  * Use <ul> or <ol> for lists.
+-->
+
+<!-- More info:
+  * https://dequeuniversity.com/rules/axe/3.3/list?application=axeAPI
 -->
